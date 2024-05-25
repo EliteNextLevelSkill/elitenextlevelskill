@@ -1,18 +1,14 @@
 {
   "name": "elitenextlevelskill-backend",
   "version": "1.0.0",
-  "description": "Backend for Elite Next Level Skill",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "build": "echo 'Build script executed'"
+    "build": "echo 'No build script specified'"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "mongoose": "^5.12.3"
-  },
-  "author": "",
-  "license": "ISC"
+    "express": "^4.17.1"
+  }
 }
 
 
