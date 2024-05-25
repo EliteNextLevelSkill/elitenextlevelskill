@@ -1,0 +1,35 @@
+import React from 'react';
+import { useParams } from 'react-router-dom';
+
+const Module = () => {
+  const { id } = useParams();
+
+  const module = {
+    id,
+    title: 'Introdução ao JavaScript',
+    content: 'Conteúdo do módulo aqui.',
+    quiz: [
+      { question: 'O que é JavaScript?', options: ['Linguagem de programação', 'Linguagem de marcação'], answer: 0 },
+    ],
+  };
+
+  return (
+    <div className="container">
+      <h1>{module.title}</h1>
+      <p>{module.content}</p>
+      <h2>Quiz</h2>
+      {module.quiz.map((q, index) => (
+        <div key={index}>
+          <p>{q.question}</p>
+          <ul>
+            {q.options.map((option, i) => (
+              <li key={i}>{option}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Module;

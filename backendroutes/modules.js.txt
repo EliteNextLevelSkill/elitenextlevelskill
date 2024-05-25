@@ -1,0 +1,14 @@
+const express = require('express');
+const router = express.Router();
+const Module = require('../models/moduleModel');
+
+router.get('/:id', async (req, res) => {
+  try {
+    const module = await Module.findById(req.params.id);
+    res.json(module);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+});
+
+module.exports = router;

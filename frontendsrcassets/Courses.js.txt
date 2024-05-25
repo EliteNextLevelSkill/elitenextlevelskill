@@ -1,0 +1,26 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Courses = () => {
+  const courses = [
+    { id: 1, title: 'Curso de JavaScript', description: 'Aprenda JavaScript do zero.' },
+    { id: 2, title: 'Curso de React', description: 'Domine o React e crie aplicações incríveis.' },
+  ];
+
+  return (
+    <div className="container">
+      <h1>Cursos</h1>
+      <ul>
+        {courses.map(course => (
+          <li key={course.id}>
+            <h2>{course.title}</h2>
+            <p>{course.description}</p>
+            <Link to={`/courses/${course.id}`}>Ver detalhes</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default Courses;

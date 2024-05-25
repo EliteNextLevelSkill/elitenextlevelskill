@@ -1,0 +1,29 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Courses from './components/Courses';
+import CourseDetail from './components/CourseDetail';
+import Module from './components/Module';
+import Certification from './components/Certification';
+import Contact from './components/Contact';
+import Blog from './components/Blog';
+
+const App = () => {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/courses" exact component={Courses} />
+        <Route path="/courses/:id" component={CourseDetail} />
+        <Route path="/module/:id" component={Module} />
+        <Route path="/certification" component={Certification} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/blog" component={Blog} />
+      </Switch>
+    </Router>
+  );
+};
+
+export default App;

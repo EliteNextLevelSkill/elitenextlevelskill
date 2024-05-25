@@ -1,0 +1,12 @@
+import React from 'react';
+
+const About = () => {
+  return (
+    <div className="container">
+      <h1>Sobre Nós</h1>
+      <p>EliteNextLevelSkill é uma empresa dedicada a fornecer cursos online de alta qualidade para ajudar você a desenvolver suas habilidades e alcançar o sucesso.</p>
+    </div>
+  );
+};
+
+export default About;
