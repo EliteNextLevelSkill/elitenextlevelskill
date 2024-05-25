@@ -1,7 +1,8 @@
 [build]
   base = "backend"
-  publish = "backend"
   command = "npm start"
+  publish = "."
 
-[functions]
-  directory = "backend/netlify/functions"
+[build.environment]
+  NODE_ENV = "production"
+
